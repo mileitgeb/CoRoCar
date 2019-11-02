@@ -39,14 +39,8 @@ enum RBLineSensor
   */
 enum RBModel
 {
-    //% block="Mk1"
-    Mk1,
-    //% block="Mk2"
-    Mk2, 
-    //% block="Mk2/LedBar"
-    Mk2A, 
     //% block="Mk3"
-    Mk3
+    v1
 }
 
 /**
@@ -108,7 +102,7 @@ namespace corocar
       *
       * @param model Model of Robobit buggy. Mk1, Mk2, or Mk3
       */
-    //% blockId="robobit_model" block="select Robobit model %model"
+    //% blockId="robobit_model" block="select CoRo Car model %model"
     //% weight=110
     export function select_model(model: RBModel): void
     {
@@ -254,14 +248,14 @@ namespace corocar
     {
         if (sensor == RBLineSensor.Left)
 	{
-	    if (_model == RBModel.Mk3)
+	    if (_model == RBModel.v1)
             	return pins.digitalReadPin(DigitalPin.P16);
 	    else
             	return pins.digitalReadPin(DigitalPin.P11);
         }
         else
 	{
-	    if (_model == RBModel.Mk3)
+	    if (_model == RBModel.v1)
             	return pins.digitalReadPin(DigitalPin.P14);
 	    else
             	return pins.digitalReadPin(DigitalPin.P5);
@@ -282,9 +276,7 @@ namespace corocar
     {
         // send pulse
         let trig = DigitalPin.P13;
-	if (_model == RBModel.Mk3)
-	    trig = DigitalPin.P15;
-	if (_model == RBModel.Mk2A)
+	if (_model == RBModel.v1)
 	    trig = DigitalPin.P15;
         let echo = trig;
         let maxCmDistance = 500;

@@ -201,7 +201,6 @@ namespace corocar
             leftSpeed = absSpeed;
         if ((motor == RBMotor.Right) || (motor == RBMotor.Both))
             rightSpeed = absSpeed;
-        setPWM();
         if (speed > 1023)
         {
             speed = 1023;
@@ -225,13 +224,16 @@ namespace corocar
         }
         if ((motor == RBMotor.Left) || (motor == RBMotor.Both))
         {
-            pins.analogWritePin(AnalogPin.P0, realSpeed);
-            pins.digitalWritePin(DigitalPin.P8, forward ? 0 : 1);
+            pins.analogWritePin(AnalogPin.P1, realSpeed);
+            pins.digitalWritePin(DigitalPin.P12, forward ? 0 : 1);
+	    pins.digitalWritePin(DigitalPin.P13, forward ? 1 : 0);
+		
         }
         if ((motor == RBMotor.Right) || (motor == RBMotor.Both))
         {
-            pins.analogWritePin(AnalogPin.P1, realSpeed);
-            pins.digitalWritePin(DigitalPin.P12, forward ? 0 : 1);
+            pins.analogWritePin(AnalogPin.P2, realSpeed);
+            pins.digitalWritePin(DigitalPin.P16, forward ? 0 : 1);
+	    pins.digitalWritePin(DigitalPin.P15, forward ? 1 : 0);
         }
     }
 

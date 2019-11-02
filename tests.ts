@@ -14,7 +14,7 @@
 
   // Read left and right line sensor
   basic.showNumber(corocar.readLine(BBLineSensor.Left));
-  basic.showNumber(.readLine(BBLineSensor.Right));
+  basic.showNumber(corocar.readLine(BBLineSensor.Right));
 
   // Read sonar values
   basic.showNumber(corocar.sonar(BBPingUnit.MicroSeconds));

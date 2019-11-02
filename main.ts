@@ -93,7 +93,7 @@ enum RBColors
  * Custom blocks
  */
 /** //% weight=10 color=#0fbc11 icon="\uf1ba" */
-//% weight=10 color=#e7660b icon="\uf1ba" block="CoRoCar" 
+//% weight=10 color=#e7660b icon="\uf1ba"
 namespace robobit
 {
     let ledBar: neopixel.Strip;

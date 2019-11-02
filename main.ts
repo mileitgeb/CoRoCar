@@ -94,7 +94,7 @@ enum RBColors
  */
 /** //% weight=10 color=#0fbc11 icon="\uf1ba" */
 //% weight=10 color=#e7660b icon="\uf1ba"
-namespace robobit
+namespace corocar
 {
     let ledBar: neopixel.Strip;
     let _model: RBModel;

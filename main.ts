@@ -89,7 +89,7 @@ enum RBColors
  * Custom blocks
  */
 /** //% weight=10 color=#0fbc11 icon="\uf1ba" */
-//% weight=10 color=#e7660b icon="\uf1ba"
+//% weight=10 color=#e7660b icon="\uf1ba" block="CoRo Car"
 namespace corocar
 {
     let _model: RBModel;
@@ -309,19 +309,6 @@ namespace corocar
             *default: return d;
         }*/
         return Math.round(d/58);
-    }
-
-    /**
-      * Adjust opening of Claw attachment
-      * @param degrees Degrees to open Claw. eg: 30
-      */
-    //% subcategory=Sensors
-    //% group=Sensors
-    //% blockId="robobit_set_claw" block="Set claw %degrees"
-    //% weight=70
-    export function setClaw(degrees: number): void
-    {
-        pins.servoWritePin(AnalogPin.P13, Math.clamp(0, 80, degrees))
     }
 
     function setPWM(): void

@@ -248,17 +248,11 @@ namespace corocar
     {
         if (sensor == RBLineSensor.Left)
 	{
-	    if (_model == RBModel.v1)
-            	return pins.digitalReadPin(DigitalPin.P16);
-	    else
             	return pins.digitalReadPin(DigitalPin.P11);
         }
         else
 	{
-	    if (_model == RBModel.v1)
-            	return pins.digitalReadPin(DigitalPin.P14);
-	    else
-            	return pins.digitalReadPin(DigitalPin.P5);
+            	return pins.digitalReadPin(DigitalPin.P14);   
         }
     }
 
@@ -275,10 +269,8 @@ namespace corocar
     export function sonar(unit: RBPingUnit): number
     {
         // send pulse
-        let trig = DigitalPin.P13;
-	if (_model == RBModel.v1)
-	    trig = DigitalPin.P15;
-        let echo = trig;
+        let trig = DigitalPin.P19;
+        let echo = Digital.P20;
         let maxCmDistance = 500;
         let d=10;
         pins.setPull(trig, PinPullMode.PullNone);

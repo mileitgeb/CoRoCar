@@ -96,7 +96,6 @@ enum RBColors
 //% weight=10 color=#e7660b icon="\uf1ba"
 namespace corocar
 {
-    let ledBar: neopixel.Strip;
     let _model: RBModel;
     let larsson: number;
     let scandir: number;

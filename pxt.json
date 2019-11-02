@@ -3,6 +3,9 @@
     "version": "0.0.4",
     "description": "Microsoft MakeCode package for CoRo Car",
     "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
     "files": [
         "README.md",
         "main.ts",

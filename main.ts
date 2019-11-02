@@ -55,11 +55,7 @@ enum RBModel
 enum RBPingUnit
 {
     //% block="cm"
-    Centimeters,
-    //% block="inches"
-    Inches,
-    //% block="μs"
-    MicroSeconds
+    Centimeters
 }
 
 /**
@@ -306,12 +302,13 @@ namespace corocar
             if (d>0)
                 break;
         }
-        switch (unit)
-        {
-            case RBPingUnit.Centimeters: Math.round(return d / 58);
-            case RBPingUnit.Inches: Math.round(return d / 148);
-            default: return d;
-        }
+        /** switch (unit)
+        *{
+            *case RBPingUnit.Centimeters: Math.round(return d / 58);
+            *case RBPingUnit.Inches: Math.round(return d / 148);
+            *default: return d;
+        }*/
+        return Math.round(d/58);
     }
 
     /**

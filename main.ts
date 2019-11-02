@@ -248,11 +248,11 @@ namespace corocar
     {
         if (sensor == RBLineSensor.Left)
 	{
-            	return pins.digitalReadPin(DigitalPin.P11);
+            	return pins.analogReadPin(AnalogPin.P3);
         }
         else
 	{
-            	return pins.digitalReadPin(DigitalPin.P14);   
+            	return pins.analogReadPin(AnalogPin.P4);   
         }
     }
 

@@ -39,7 +39,7 @@ enum RBLineSensor
   */
 enum RBModel
 {
-    //% block="Mk3"
+    //% block="v1"
     v1
 }
 
@@ -100,7 +100,7 @@ namespace corocar
     /**
       * Select Model of Robobit (Determines Pins used)
       *
-      * @param model Model of Robobit buggy. Mk1, Mk2, or Mk3
+      * @param model Model of Robobit buggy. v1
       */
     //% blockId="robobit_model" block="select CoRo Car model %model"
     //% weight=110
@@ -272,7 +272,7 @@ namespace corocar
     {
         // send pulse
         let trig = DigitalPin.P19;
-        let echo = Digital.P20;
+        let echo = DigitalPin.P20;
         let maxCmDistance = 500;
         let d=10;
         pins.setPull(trig, PinPullMode.PullNone);

@@ -1,6 +1,6 @@
 {
     "name": "CoRoCar",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "description": "Microsoft MakeCode package for CoRo Car",
     "license": "MIT",
     "dependencies": {

@@ -271,8 +271,8 @@ namespace corocar
     export function sonar(unit: RBPingUnit): number
     {
         // send pulse
-        let trig = DigitalPin.P19;
-        let echo = DigitalPin.P20;
+        let trig = DigitalPin.P0;
+        let echo = DigitalPin.P8;
         let maxCmDistance = 500;
         let d=10;
         pins.setPull(trig, PinPullMode.PullNone);
